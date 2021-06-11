@@ -36,7 +36,7 @@ public class ChessMatch {
 	private Piece makeMove(Position source, Position target) {
 		Piece p = board.removePiece(source);
 		Piece capturedPiece = board.removePiece(target);
-		board.placePieces(p, target);
+		board.placePiece(p, target);
 		return capturedPiece;
 	}
 	
@@ -50,7 +50,7 @@ public class ChessMatch {
 	}
 	
 	private void placeNewPiece(char column, int row, ChessPiece piece) {
-		board.placePieces(piece, new ChessPosition(column, row).toPosition());
+		board.placePiece(piece, new ChessPosition(column, row).toPosition());
 	}
 	
 	private void initialSetup() {
